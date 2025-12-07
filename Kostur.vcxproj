@@ -132,7 +132,25 @@
     <ClInclude Include="Header\Util.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="animal.frag" />
+    <None Include="animal.vert" />
+    <None Include="box.frag" />
+    <None Include="box.vert" />
     <None Include="packages.config" />
+    <None Include="watermark.frag" />
+    <None Include="watermark.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\bear.png" />
+    <Image Include="Resources\cursor.png" />
+    <Image Include="Resources\handClosed.png" />
+    <Image Include="Resources\handCursor.png" />
+    <Image Include="Resources\handOpened.png" />
+    <Image Include="Resources\lever.png" />
+    <Image Include="Resources\monkey.png" />
+    <Image Include="Resources\redMouse.png" />
+    <Image Include="Resources\token.png" />
+    <Image Include="Resources\Watermark.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -32,5 +32,55 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="watermark.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="watermark.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="box.vert">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="box.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="animal.frag">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="animal.vert">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Watermark.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\token.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\lever.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\redMouse.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\cursor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\bear.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\monkey.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\handClosed.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\handOpened.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\handCursor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
