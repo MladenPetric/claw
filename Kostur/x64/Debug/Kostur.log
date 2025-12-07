@@ -1,5 +1,5 @@
 ﻿  Main.cpp
-C:\Users\Uros\Desktop\GRAFIKA 2D\claw\Source\Main.cpp(30,25): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Uros\Desktop\GRAFIKA 2D\claw\Source\Main.cpp(29,25): warning C4305: 'initializing': truncation from 'double' to 'float'
+C:\Users\Uros\Desktop\GRAFIKA 2D\claw\Source\Main.cpp(388,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 C:\Users\Uros\Desktop\GRAFIKA 2D\claw\Source\Main.cpp(389,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\Uros\Desktop\GRAFIKA 2D\claw\Source\Main.cpp(390,20): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   Kostur.vcxproj -> C:\Users\Uros\Desktop\GRAFIKA 2D\claw\x64\Debug\Kostur.exe

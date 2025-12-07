@@ -13,11 +13,10 @@
 const int NUM_SEGMENTS = 30;
 float lampVertices[(NUM_SEGMENTS + 2) * 4];   // X, Y, dummyU, dummyV
 
-
 int screenWidth = 800;
 int screenHeight = 800;
 unsigned watermarkTexture;
-GLFWcursor* cursorToken;
+GLFWcursor* cursorToken; //dva kursora
 GLFWcursor* cursorLever;
 unsigned int texAnimal1;
 unsigned int texAnimal2;
@@ -27,15 +26,15 @@ bool gameActive = false;      // da li je ubačen žeton
 bool mousePressed = false;    // da ne registruje višestruke klikove
 float clawX = 0.0f;            // centar kretanja po X
 const float clawSpeed = 0.01f; // brzina pomeranja
-const float leftLimit = -0.8;
+const float leftLimit = -0.8; //limit za kretanje kandze levo desno
 const float rightLimit = 0.8f;
 unsigned int VBOcable;
 unsigned int VBOclaw;
 bool clawDescending = false;
 bool clawAscending = false;
-float clawY = 0.48f;   // trenutna Y pozicija vrha kandže
+float clawY = 0.48f;   //trenutna Y pozicija vrha kandže
 float cableTopY = 0.60f;
-float clawBottomLimit = -0.38f;   // dno kutije
+float clawBottomLimit = -0.38f;   //dno kutije
 float clawDropSpeed = 0.01f;
 
 bool grabbed = false;
@@ -50,25 +49,25 @@ float animal2Xoffset = 0.0f;
 //ispustanje zivotinje
 bool animalFalling = false;
 
-bool fallingToOutput = false;   // da li životinja pada kroz rupu u donji (crveni) deo
+bool fallingToOutput = false;   //da li životinja pada kroz rupu u donji deo
 
-// geometrija rupe (prema dropSlotVertices)
+//geometrija rupe (prema dropSlotVertices)
 const float holeLeft = 0.36f;
 const float holeRight = 0.90f;
 const float holeTopY = -0.48f;
 
-// donji deo (prozirni crveni) – malo iznad -0.85 da ne ulazi u ivicu
+//donji deo 
 const float outputFloorY = -0.82f;
 
 
-bool clawLocked = false;       // kandža ne može da se otvori dok je osvojena životinja
-bool lampBlinking = false;     // da li lampica menja boje
-double lampTimer = 0.0;        // vreme početka blinkanja
+bool clawLocked = false;       //kandža ne može da se otvori dok je osvojena životinja
+bool lampBlinking = false;     //da li lampica menja boje
+double lampTimer = 0.0;        //vreme početka blinkanja
 
 
 void preprocessTexture(unsigned& texture, const char* filepath) {
-    texture = loadImageToTexture(filepath); // Učitavanje teksture
-    glBindTexture(GL_TEXTURE_2D, texture); // Vezujemo se za teksturu kako bismo je podesili
+    texture = loadImageToTexture(filepath); //Učitavanje teksture
+    glBindTexture(GL_TEXTURE_2D, texture); //Vezujemo se za teksturu kako bismo je podesili
 
     // Generisanje mipmapa - predefinisani različiti formati za lakše skaliranje po potrebi (npr. da postoji 32 x 32 verzija slike, ali i 16 x 16, 256 x 256...)
     glGenerateMipmap(GL_TEXTURE_2D);
@@ -405,7 +404,7 @@ int main()
         //ako je kraj igre izvucena zivotinja
         if (clickEvent)
         {
-            // 1) Slot za žeton
+            //Slot za žeton
             bool insideSlot =
                 ndcX >= -0.5f && ndcX <= -0.3f &&
                 ndcY <= -0.53f && ndcY >= -0.62f;
@@ -414,7 +413,7 @@ int main()
                 gameActive = true;
             }
 
-            // 2) Klik na životinju u output zoni
+            //Klik na životinju u output zoni
             float a1Left = animal1Left + animal1Xoffset;
             float a1Right = animal1Right + animal1Xoffset;
             float a1Top = animal1Top + animal1Yoffset;
@@ -443,8 +442,6 @@ int main()
                 continue;
             }
         }
-
-
 
         if (gameActive) {
             bool movedLeft = glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS;
@@ -784,7 +781,6 @@ int main()
 
         while (glfwGetTime() - initFrameTime < 1 / 75.0) {}
     }
-
 
     glfwDestroyWindow(window);
     glfwTerminate();
